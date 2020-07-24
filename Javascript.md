@@ -16,7 +16,7 @@ JavaScript es Case Sensitive, diferencia las mayúsculas de las minúsculas.
 
 * typeof te devuelve el tipo de dato como string.
 
-## Datos
+## 1. Datos
 
 ### Tipos de datos
 
@@ -34,7 +34,7 @@ JavaScript es Case Sensitive, diferencia las mayúsculas de las minúsculas.
   * function
   * array
 
-## Operadores
+## 2. Operadores
 
 * **Asignación**
   * =
@@ -94,7 +94,7 @@ JavaScript es Case Sensitive, diferencia las mayúsculas de las minúsculas.
   - ||
   - &&
 
-## Números
+## 3. Números
 
 * **toFixed()**: Especifica el número de decimales. 
 
@@ -127,7 +127,7 @@ JavaScript es Case Sensitive, diferencia las mayúsculas de las minúsculas.
   * **.round():** Lo redondea de acuerdo a su valor medio
   * **.random():** Devuelve un numero aleatorio entre 0 y 1 
 
-## Strings
+## 4. Strings
 
 ### Propiedad
 
@@ -266,7 +266,9 @@ Es lo que puede hacer ese dato
 
   
 
-## Condicionales y ciclos
+## 5. Condicionales y ciclos
+
+### Condicionales
 
 * **if:**
 
@@ -340,13 +342,108 @@ switch (age) {
 }
 ```
 
+### Ciclos
 
+* **for**
 
+  ```javascript
+  for (let i = 0; i < 10; i++) {
+      console.log(i)
+  }
+  ```
 
+  *continue*
 
+  ```javascript
+  for (let i = 1; i <= 10; i++) {
+      if(i%2 ===0) continue //saltar el valor
+      console.log(i)
+  }
+  ```
 
+  *break*
 
+  ```javascript
+  let n =0
+  for (let i = 1; i <= 10; i++) {
+      if(i%2 ===0){
+          console.log(i)
+          n++
+      }
+      if(n>2) break // rompe el ciclo
+  }
+  ```
 
+* **while:** 
 
+  ```javascript
+  let i=0
+  while (i<10){
+      console.log(i)
+      i++
+  }
+  ```
 
+  
+
+* **do while:**
+
+```javascript
+let password='123456'
+let pass
+do{
+     pass=prompt('Ingrese la contraseña')
+}while(password !==pass)
+```
+
+## 6. Funciones
+
+### Que es
+
+Es un bloque de código reutilizable, donde contiene un conjunto de instrucciones
+
+* **Como funciona**
+
+  * input => funcion() => output
+  * input=>funcion()=> output1=>funcion()=>output2...
+
+  *input: argumentos*
+
+  *output: valor de retorno*, las funciones sin valor de retorno devuelven undefined
+
+* **Ejecutar una función**
+
+  * nombreFuncion(argumento1,argumento2....)
+  * nombreFuncion() / *Si es que no necesita argumentos(datos de entrada)*
+
+* Una función puede ser método de un objeto
+
+  * 'Hola'.slice(3)
+
+### Formas de declarar una función
+
+* **Declaración**
+
+  ```javascript
+  function nombreFuncion (parametros){
+  	//instruciones
+  	return valor
+  }
+  ```
+
+  
+
+* **Expresión**
+
+### Las funciones son ciudadanos de primera clase
+
+### Puras
+
+### Autoinvoc adas
+
+### Nombradas y anonimas
+
+### Scope
+
+### Parametros y argumentos
 

@@ -74,8 +74,8 @@ let data = {
 // console.log(profesor.endsWith('illa'))
 
 /*--------Condicionales----------*/
-let age =parseInt(prompt('Escriba su edad'),10)
-console.log(age)
+// let age =parseInt(prompt('Escriba su edad'),10)
+// console.log(age)
 // if(age !== NaN)
 // {
 //     if (age>=18)
@@ -92,14 +92,53 @@ console.log(age)
 // }
 
 /*---Switch----*/
-switch (age) {
-    case 1:
-        alert('eres timido')
-        break;
-    case 2:
-        alert('Eres extrovertido')
-        break;
+// switch (age) {
+//     case 1:
+//         alert('eres timido')
+//         break;
+//     case 2:
+//         alert('Eres extrovertido')
+//         break;
 
-    default: alert('Eres normal')
-        break;
-}
+//     default: alert('Eres normal')
+//         break;
+// }
+
+/*--------------Ciclos------------*/
+/*-----for------*/
+// for (let i = 1; i <= 10; i++) {
+//     if(i%2 ===0) continue //saltar el valor
+//     console.log(i)
+// }
+
+// let n =0
+// for (let i = 1; i <= 10; i++) {
+//     if(i%2 ===0){
+//         console.log(i)
+//         n++
+//     }
+//     if(n>2) break // rompe el ciclo
+// }
+
+/*-----while-----*/
+// let i=0
+// while (i<10){
+//     console.log(i)
+//     i++
+// }
+
+/*----do while----*/
+let password='123456'
+let pass
+do{
+     pass=prompt('Ingrese la contraseña')
+}while(password !==pass)
+
+
+
+
+
+
+
+
+
