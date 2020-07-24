@@ -55,3 +55,10 @@ let data = {
     apellido: "Varas",
     edad: 54
 }
+
+/*------ Ternario -----------*/
+let miEdad = prompt('Dime tu edad')
+
+let isAdult = miEdad >=18 ? 'Es mayor de edad' : 'Eres menor' 
+
+alert(isAdult)
