@@ -111,4 +111,108 @@ JavaScript es Case Sensitive, diferencia las mayúsculas de las minúsculas.
   * **parseInt(string,10):** string, el texto a cambiar a numero, y el 10 es para el sistema decimal con el que trabajamos.
   * **parseFloat(string):** convierte los valores con sus decimales.
 
-* 
+* **NaN:** es un valor que se devuelve cuando intentamos hacer una operación pero no devolvemos un numero.
+
+  ```js
+  5 * 'Mama'
+  NaN
+  ```
+
+  
+
+* **Math**
+
+  * **.floor():** Redondea un numero hacia el menor
+  * **.ceil():** Lo redondea hacia arriba
+  * **.round():** Lo redondea de acuerdo a su valor medio
+  * **.random():** Devuelve un numero aleatorio entre 0 y 1 
+
+## Strings
+
+### Propiedad
+
+Es una característica que tiene ese dato
+
+**.length:** Nos devuelve cuantos caracteres tiene el texto
+
+```js
+'kenny'.length
+6
+```
+
+
+
+### Métodos
+
+Es lo que puede hacer ese dato
+
+#### Sin parámetros
+
+* **.trim():** Quitar los espacios en blanco, al inicio y al final
+
+  ```js
+  '    Hola    '.trim()
+  'Hola'
+  ```
+
+  
+
+* **.toUpperCase():** Convierte todo a mayúsculas
+
+* **.toLoweCase():** Convierte todo a minúsculas
+
+#### Encontrar Caracteres
+
+* **indexOf(string[,i]):** preguntamos en que posicion esta un caracter. 
+
+  ```js
+  let profesor = 'Kenny Armas Mantilla'
+  profesor.indexOf('mas')
+  8
+  
+  /*profesor.indexOf('n',4)---- empieza a busar desde la posicion 4*/
+  profesor.indexOf('n',profesor.indexOf('n')+1)
+  3
+  ```
+
+  *Si el resultado es -1 es que no encuentra el valor*
+
+* **lastIndexOf():** Empieza una busqueda desde atras.
+
+  ```js
+  profesor.lastIndexOf('n')
+  14
+  ```
+
+* **includes(string[,i]):** Pregunta si es que el texto presenta cierta cadena de caracteres de texto
+
+  ```js
+  profesor.includes('mas')
+  true
+  ```
+
+* **startsWith(string[,i]):** Pregunta si empieza con un determinado texto.
+
+  ```js
+  profesor.starsWith('Ken')
+  true
+  ```
+
+* **endsWith(string[,i]):** Pregunta como termina un texto
+
+#### Manipular strings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

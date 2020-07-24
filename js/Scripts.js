@@ -57,8 +57,18 @@ let data = {
 }
 
 /*------ Ternario -----------*/
-let miEdad = prompt('Dime tu edad')
+// let miEdad = prompt('Dime tu edad')
 
-let isAdult = miEdad >=18 ? 'Es mayor de edad' : 'Eres menor' 
+// let isAdult = miEdad >=18 ? 'Es mayor de edad' : 'Eres menor' 
 
-alert(isAdult)
+// alert(isAdult)
+
+
+/*---------Strings----------*/
+let profesor = 'Kenny Armas Mantilla'
+console.log(profesor.indexOf('mas'))
+console.log(profesor.indexOf('n',4))
+console.log(profesor.indexOf('n',profesor.indexOf('n')+1))
+console.log(profesor.includes('mas'))
+console.log(profesor.startsWith('Ken'))
+console.log(profesor.endsWith('illa'))
