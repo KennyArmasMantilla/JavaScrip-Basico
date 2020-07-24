@@ -10,7 +10,7 @@ const edad=60
 let numero=10,
     nombre ='Luis',
     empresa='Scope',
-    edad, cargo, pais
+    cargo, pais
     numero=20
 
 
@@ -25,16 +25,33 @@ if(10>numero){
 
 /*-----------------tipos de datos----------------*/
 /*------ Primitivos ---------*/
+
 /*numeros: son numeros nada mas*/
-let numero =10
+let number =10
+
 /*string son textos, que se ponen en comillas "" `` ''*/
 let palabra ="letras"
+let name = `Tengo ${number} años`
+//Podemos crear marcado html
+// let div = `
+//     <div class="container">
+//     ${name}
+//     </div>    
+// `
+// document.body.innerHTML=div
+
+console.log(name)
+
 /*Los boolean  */
-boolean
-undefined
-null
-symbol
-
-
+/*boolean que solo retorna verdadero o falso*/
+//undefined //es para especificar de que algo si existe pero no tiene un valor
+//null//ese dato no existe
+//symbol//Te permite crear inferencias unicas.
 
 /*------ Compuestos ---------*/
+let numbers = [1,2,3,4,5,6,7]
+let data = {
+    nombre:"Alexys",
+    apellido: "Varas",
+    edad: 54
+}
