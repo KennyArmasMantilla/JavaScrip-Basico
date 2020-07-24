@@ -65,10 +65,41 @@ let data = {
 
 
 /*---------Strings----------*/
-let profesor = 'Kenny Armas Mantilla'
-console.log(profesor.indexOf('mas'))
-console.log(profesor.indexOf('n',4))
-console.log(profesor.indexOf('n',profesor.indexOf('n')+1))
-console.log(profesor.includes('mas'))
-console.log(profesor.startsWith('Ken'))
-console.log(profesor.endsWith('illa'))
+// let profesor = 'Kenny Armas Mantilla'
+// console.log(profesor.indexOf('mas'))
+// console.log(profesor.indexOf('n',4))
+// console.log(profesor.indexOf('n',profesor.indexOf('n')+1))
+// console.log(profesor.includes('mas'))
+// console.log(profesor.startsWith('Ken'))
+// console.log(profesor.endsWith('illa'))
+
+/*--------Condicionales----------*/
+let age =parseInt(prompt('Escriba su edad'),10)
+console.log(age)
+// if(age !== NaN)
+// {
+//     if (age>=18)
+//     {
+//         alert('Eres mayor')
+//     }
+//     else
+//     {
+//         alert('Eres menor de edad')
+//     }
+// }
+// else{
+//     alert('Edad no valida')
+// }
+
+/*---Switch----*/
+switch (age) {
+    case 1:
+        alert('eres timido')
+        break;
+    case 2:
+        alert('Eres extrovertido')
+        break;
+
+    default: alert('Eres normal')
+        break;
+}

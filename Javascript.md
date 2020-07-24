@@ -21,7 +21,7 @@ JavaScript es Case Sensitive, diferencia las mayúsculas de las minúsculas.
 ### Tipos de datos
 
 * **Primitivos**
-  * null
+  * *null
   * undefined
   * number
   * string
@@ -202,9 +202,143 @@ Es lo que puede hacer ese dato
 
 #### Manipular strings
 
+* **replace(original, replacement):** Toma un texto y lo remplaza por otro.
 
+  ```js
+  'Hola mundo'.replace('mundo','Kenny')
+  'Hola Kenny'
+  ```
 
+* **split(separator[,quantity]):** Separa un texto según el separador que usemos.
 
+  ```js
+  >'Kenny'.split('e')
+  <<["K","nny"]
+  
+  >'Hola mundo'.split(' ')
+  <<["Hola","mundo"]
+  
+  >'Hola mundo'.split(' ')[1]
+  <<["mundo"]
+  
+  >'Hola mundo'.split(' ')[0]
+  <<["Hola"]
+  
+  >'Kenny'.split('')
+  <<["K","e","n","n","y"]
+  ```
+
+* **substring(star[,end]):** Extra el texto desde la posición que se le indica. *No incluye el numero final y  si el end es negativo extrae hacia atrás*
+
+  ```js
+  >'Hola mundo'.substring(2)
+  <<"la mundo"
+  
+  >'Hola mundo'.substring(2,5)
+  <<"la "
+  
+  >'Hola mundo'.substring(2,-1)
+  <<"Ho"
+  
+  >'Hola mundo'.substring(5,-1)
+  <<"Hola "
+  ```
+
+* **substr(start[,quantity]):** Busca la cantidad que nos indica. *Si estar es negativo empieza a extraer desde atrás*
+
+  ```js
+  >'Hola mundo'.substr(2,5)
+  <<"la mu"
+  
+  >'Hola mundo'.substr(-2)
+  <<"do"
+  
+  >'Hola mundo'.substr(-4)
+  <<"undo"
+  ```
+
+* **slice(star[,end]):** Es identico a substring solo cambia sus valores negativos. *Si end es negativo: no toma los ultimos [end] valores, si star es negativo: empieza a contar desde el final*
+
+  ```javascript
+  >'Hola mundo'.slice(-5,-2)
+  <<"mun"
+  ```
+
+  
+
+## Condicionales y ciclos
+
+* **if:**
+
+  ```js
+  if(5>3)
+  {
+      console.log('Hola')
+  }
+  else if(8<10)
+  {
+  	console.log('mundo')        
+  }
+  ```
+
+  
+
+* **Condiciones múltiples:**
+
+  ```
+  if (6 >3 && 5>2)
+  {
+  	console.log('Verdadero')
+  }
+  
+  if (2 >3 || 5>2)
+  {
+  	console.log('Verdadero')
+  }
+  ```
+
+* **Condicionales anidadas:** Una condición dentro de otra
+
+  ```js
+  if(5>2)
+  {
+  	console.log('Super')
+  	if(6<50)
+  	{
+  		console.log('root')
+  	}
+  }
+  ```
+
+* **Truthy and falsy values:** Son valores que sin ser boolean se comportan como tal.
+
+  * **Falsy**
+    * 0
+    * ""
+    * NaN
+    * undefine
+    * null
+  * **Truthy**
+    * string no vacio
+    * Número diferente de cero
+    * arrays
+    * objetos
+
+* **switch:** Cuando queremos comparar un valor con una serie de valores usamos switch.
+
+```js
+switch (age) {
+    case 1:
+        alert('eres timido')
+        break;
+    case 2:
+        alert('Eres extrovertido')
+        break;
+
+    default: alert('Eres normal')
+        break;
+}
+```
 
 
 
