@@ -128,14 +128,21 @@ let data = {
 // }
 
 /*----do while----*/
-let password='123456'
-let pass
-do{
-     pass=prompt('Ingrese la contraseña')
-}while(password !==pass)
+// let password='123456'
+// let pass
+// do{
+//      pass=prompt('Ingrese la contraseña')
+// }while(password !==pass)
 
 
+/*------------------Funciones---------------*/
+function saludar(persona, sexo){
+    return sexo==='m'? `Bienvenido, ${persona}` :`Bienvenida, ${persona}`
+}
 
+console.log(saludar('Kenny','m'))
+console.log(saludar('Jorge','m'))
+console.log(saludar('Maria','f'))
 
 
 
