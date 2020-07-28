@@ -283,13 +283,42 @@ console.log(name)
 
 /*---this----*/
 //Esto es un objeto
-const c = console.log
-let user = {
-    nombre: 'Alexys', 
-    edad: 54,
-    getEdad(){
-        c(this.edad)
-    }
-}
+// const c = console.log
+// let user = {
+//     nombre: 'Alexys', 
+//     edad: 54,
+//     getEdad(){
+//         c(this.edad)
+//     }
+// }
 
-user.getEdad()
+// user.getEdad()
+
+
+/*--------------------------------Arrays--------------------------------*/
+// let array= ['hola',2,true,undefined, [1,2,3,4], {}]
+// console.log(array)
+// console.log(array[array.length - 2])
+
+/*--------Desestructuracion------*/
+// let array5 = ['Hola', 'bienvendido', 'Javascript']
+/*Creamos 4 variables en una sola linea para igualar*/
+// let [s1,s2,s3]= array5
+
+// console.log(s1)
+// console.log(s2)
+// console.log(s3)
+/*---------Agregar o quitar valores----------*/
+let array1 = [1,2,3,4]
+console.log(array1)
+array1.push(5)
+console.log(array1)
+array1.pop()
+console.log(array1)
+
+
+
+
+
+
+

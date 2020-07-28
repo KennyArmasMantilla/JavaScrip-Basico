@@ -1,3 +1,5 @@
+
+
 # JavaScript
 
 Es un lenguaje de programación que no sigue paradigmas básicos de programación.
@@ -581,9 +583,53 @@ function aumentar () {
 aumentar()()//doble llmado porque llama a una doble funcion.
 ```
 
-## 7. Arrays 
+## 7. Arrays
+
+* Es una lista de valores separados por comas y encerrados entre corchetes. Que nos permite acceder a cada elemento.
+
+  ```javascript
+  let array= ['hola', 'juan', 2, true, undefined, [1,2,3,4], {}]
+  
+  console.log(array[0])
+  ```
+
+* Desestructuración de arrays: nos permite coger estructura de datos y dividirlas, para acceder a ellas directamente.
+
+  ```javascript
+  let array5 = ['Hola', 'bienvendido', 'Javascript']
+  /*Creamos 4 variables en una sola linea para igualar*/
+  let [s1,s2,s3]= array5
+  ```
 
 ### Métodos
+
+#### **Agregar o quitar**
+
+* **Al final: **
+
+  * .push(*value*): agrega un valor al final, *Por lo general se usa casi siempre*
+  * .pop(): quita el ultimo elemento del array.
+
+  ```javascript
+  //push
+  let array1 = [1,2,3,4]
+  array1.push(5)
+  //pop
+  array1.pop()
+  ```
+
+* **Al inicio: **
+
+  * .unshit (*value*):
+  * shift():
+
+* **Posición personalizada: **
+
+#### Ordenar
+
+#### Concatenar, transformar a string
+
+#### Encontrar elementos
 
 ### Objeto Math con arrays
 
