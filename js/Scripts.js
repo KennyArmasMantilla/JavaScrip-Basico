@@ -136,16 +136,40 @@ let data = {
 
 
 /*------------------Funciones---------------*/
-function saludar(persona, sexo){
-    return sexo==='m'? `Bienvenido, ${persona}` :`Bienvenida, ${persona}`
+// function saludar(persona, sexo){
+//     return sexo==='m'? `Bienvenido, ${persona}` :`Bienvenida, ${persona}`
+// }
+
+// console.log(saludar('Kenny','m'))
+// console.log(saludar('Jorge','m'))
+// console.log(saludar('Maria','f'))
+
+/*------Forma de expresion o funcion, de flecha-------*/
+// const saludar = (persona, sexo)=>{
+//     return sexo==='m'? `Bienvenido, ${persona}` :`Bienvenida, ${persona}`
+// }
+
+// console.log(saludar('Kenny','m'))
+// console.log(saludar('Jorge','m'))
+// console.log(saludar('Maria','f'))
+
+// const sumar = (a,b) => a + b 
+
+// console.log(sumar(5,7))
+
+/*--valores por defecto-- */
+// const saludar = (persona, sexo='m') => {
+//     let saludo = sexo === 'm' 
+//     	? 'Bienvenido' : 'Bienvenida'
+//   	return `${saludo} a mi pagina, ${persona}`
+// }
+// console.log(saludar('Kenny'))
+// console.log(saludar('Jorge'))
+// console.log(saludar('Maria','f'))
+
+/*----parametros rest */
+const sumarTodos =(...numeros) => {
+    console.log(numeros)
 }
 
-console.log(saludar('Kenny','m'))
-console.log(saludar('Jorge','m'))
-console.log(saludar('Maria','f'))
-
-
-
-
-
-
+sumarTodos(1,2,3,4,5,6,7,8,9)

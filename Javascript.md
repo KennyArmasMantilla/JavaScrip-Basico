@@ -435,6 +435,59 @@ Es un bloque de código reutilizable, donde contiene un conjunto de instruccione
 
 * **Expresión**
 
+  Es un bloque de código que tiene un valor:
+
+  * **Con function(en desuso) **
+
+    ```javascript
+    var nombreFuncion = function (){
+    	//instrucciones de la funcion
+    	return valor
+    }
+    ```
+
+    
+
+  * **funciones de flecha (recomendado desde ES6):**
+
+    ```javascript
+    const nombreFuncion =(parametros)=>{
+    	//instrucciones de la funcion
+    	return valor
+    }
+    /* En caso solo retorne un valor*/
+    const nombreFuncion = (parametros) => valor
+    ```
+
+### Parametros y argumentos
+
+* **Parámetros:** Son variables locales que se definen en la declaración de la función. Pueden tener valores por defecto.
+
+  ```javascript
+  const saludar = (persona, sexo='m') => {
+      let saludo = sexo === 'm' 
+      	? 'Bienvenido' : 'Bienvenida'
+    	return `${saludo} a mi pagina, ${persona}`
+  }
+  ```
+
+* **Argumentos:**
+
+  * Si hay mas argumentos que parámetros, los adicionales se ignoran.
+  * Si hay menos argumentos, los faltantes son **undefined**, a menos que tengan un valor por defecto.
+
+* **Parámetros rest (spread operator):**
+
+  Operador de espación
+
+  ```javascript
+  const sumarTodos =(...numeros) => {
+      console.log(numeros)
+  }
+  ```
+
+  
+
 ### Las funciones son ciudadanos de primera clase
 
 ### Puras
@@ -445,5 +498,5 @@ Es un bloque de código reutilizable, donde contiene un conjunto de instruccione
 
 ### Scope
 
-### Parametros y argumentos
+### 
 
