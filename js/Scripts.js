@@ -240,14 +240,56 @@ console.log(name)
 // c(a)
 /*----Funciones auto invocadas---- */
 
+// const c = console.log
+// let a = 'Hola'
+// const saludar = ((saludo,persona) =>`${saludo} ${persona}`)(a,'Luis')
+
+// c(saludar)
+
+/*----Funcion anonima-----*/
+// setTimeout(()=>{
+// 	alert('Hola Kenny')
+// }, 3000)
+
+/*--------scope--------*/
+// const c = console.log
+
+// {
+//     let profesor = 'Yo'
+//     {
+//         c(profesor)
+//     }
+// }
+
+/*---closures--- */
+// const c = console.log
+
+// function aumentar () {
+//     let numero = 0
+//     return function() {
+//         numero++
+//         c(numero)
+//     }
+// }
+
+// aumentar()()
+
+// const incrementar = aumentar()
+
+// incrementar()
+// incrementar()
+// incrementar()
+// incrementar()
+
+/*---this----*/
+//Esto es un objeto
 const c = console.log
-let a = 'Hola'
-const saludar = ((saludo,persona) =>`${saludo} ${persona}`)(a,'Luis')
+let user = {
+    nombre: 'Alexys', 
+    edad: 54,
+    getEdad(){
+        c(this.edad)
+    }
+}
 
-c(saludar)
-
-
-
-
-
-
+user.getEdad()

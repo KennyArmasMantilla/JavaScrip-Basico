@@ -531,7 +531,75 @@ Las funciones son un valor en javascript
 
 * **Funciones nombradas y anónimas:**
 
+  * Una funcion es llamda cuando se declara.
+
+  * Una funcion anonima es aquella que no tiene nombre, generalmente estan en callback 
+
+    ```javascript
+    setTimeout(()=>{
+    	alert('Hola Kenny')
+    }, 300)
+    ```
+
 ### Scope
 
-### 
+Es en contexto en el que una variable existe. 
+
+```javascript
+const c = console.log
+
+{
+    let profesor = 'Yo'{
+        c(profesor)
+    }
+}
+```
+
+
+
+* **this:**
+
+  * Representa al objeto del cual se ejecuta la función
+
+  * Las arrow functions permiten acceder al this superior dentro de un closure (lexical this)
+
+    
+
+* **closures:** Son como, atravez de funciones internas podemos llegar a valores externos.
+
+```javascript
+const c = console.log
+
+function aumentar () {
+    let numero = 0
+    return function() {
+        numero++
+        c(numero)
+    }
+}
+
+aumentar()()//doble llmado porque llama a una doble funcion.
+```
+
+## 7. Arrays 
+
+### Métodos
+
+### Objeto Math con arrays
+
+### Eliminar elementos duplicados de un Array
+
+### Recorrer un array
+
+### Map
+
+### Fliter
+
+### Reduce
+
+
+
+
+
+
 
