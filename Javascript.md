@@ -486,15 +486,50 @@ Es un bloque de código reutilizable, donde contiene un conjunto de instruccione
   }
   ```
 
-  
-
 ### Las funciones son ciudadanos de primera clase
 
-### Puras
+Las funciones son un valor en javascript
 
-### Autoinvoc adas
+* Pueden ser almacenadas en variables o constantes 
 
-### Nombradas y anonimas
+  ```javascript
+  //funcion por expresion
+  const c = console.log
+  ```
+
+  
+
+* Pueden ser pasadas como argumentos de otra función, **callbacks**
+
+* Pueden ser retornadas por otra función, **closures**
+
+* Pueden tener métodos o propiedades, **POO**
+
+### Tipos de funciones
+
+* **Funciones puras:** No causan un efecto secundario, y siempre devuelven los mismos valores para los mismos parámetros.
+
+  ```javascript
+  const c = console.log
+  let a = 'Hola'
+  const saludar = (saludo,persona) =>`${saludo} 		${persona}`
+  
+  c(saludar(a,'Luis')
+  ```
+
+* **Funciones auto invocadas:** Son aquellas funciones que no necesitan luego invocarse, se ejecutan solas.
+
+  ```javascript
+  const c = console.log
+  let a = 'Hola'
+  const saludar = ((saludo,persona) =>`${saludo} 		${persona}`)(a,'Luis')
+  
+  c(saludar)
+  ```
+
+  
+
+* **Funciones nombradas y anónimas:**
 
 ### Scope
 

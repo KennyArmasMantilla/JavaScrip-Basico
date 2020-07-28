@@ -5,7 +5,7 @@
 "nombre de la variable" sin espacios ni # adelante
 lueego le asignamos un valor =*/
 const numeros =20
-const edad=60
+//const edad=60
 
 let numero=10,
     nombre ='Luis',
@@ -49,12 +49,12 @@ console.log(name)
 //symbol//Te permite crear inferencias unicas.
 
 /*------ Compuestos ---------*/
-let numbers = [1,2,3,4,5,6,7]
-let data = {
-    nombre:"Alexys",
-    apellido: "Varas",
-    edad: 54
-}
+// let numbers = [1,2,3,4,5,6,7]
+// let data = {
+//     nombre:"Alexys",
+//     apellido: "Varas",
+//     edad: 54
+// }
 
 /*------ Ternario -----------*/
 // let miEdad = prompt('Dime tu edad')
@@ -135,7 +135,7 @@ let data = {
 // }while(password !==pass)
 
 
-/*------------------Funciones---------------*/
+/*----------------------------Funciones----------------------*/
 // function saludar(persona, sexo){
 //     return sexo==='m'? `Bienvenido, ${persona}` :`Bienvenida, ${persona}`
 // }
@@ -168,8 +168,86 @@ let data = {
 // console.log(saludar('Maria','f'))
 
 /*----parametros rest */
-const sumarTodos =(...numeros) => {
-    console.log(numeros)
-}
+// const sumarTodos =(...numeros) => {
+//     console.log(numeros)
+// }
+// sumarTodos(1,2,3,4,5,6,7,8,9)
 
-sumarTodos(1,2,3,4,5,6,7,8,9)
+// const sumarTodos =(...numeros) => {
+//     let resultado = 0
+//     for (let i = 0; i < numeros.length; i++) {
+//         resultado += numeros[i]
+        
+//     }
+//     return resultado
+// }
+
+// console.log(sumarTodos(1,2,3,4,5,6,7,8,9))
+
+
+/*-----En una variable-----*/
+// const c = console.log
+// const multiplicar = (a,b) => a*b
+// c(multiplicar(3,4))
+
+/*------Callbacks-------*/
+// const c = console.log
+// const multiplicar = (a,b) => a*b
+
+// let edad = multiplicar(5,4)
+// c(edad)
+
+// let edad2 = multiplicar(edad,2)
+// c(edad2)
+
+/*-----Retornadas por otra funcion */
+
+// const c = console.log
+
+// function sumar(x) {
+//     return function(y)
+//     {
+//        return x + y
+//     }
+// }
+//En flecha
+// const c = console.log
+// const sumar = x=> y => x + y
+
+// c(sumar(5))
+// c(sumar(5)(2))
+
+
+
+/*--Funciones retornadas---*/
+
+// const c = console.log
+
+// const doSomething = x => y => x*y
+
+// const a = doSomething(2)(2)
+// const b = doSomething(3)
+
+// c(doSomething(a)(b(3)))
+
+
+/*---Funciones puras------*/
+// const c = console.log
+// let a = 'Hola'
+// const saludar = (saludo,persona) =>`${saludo} ${persona}`
+
+// c(saludar(a,'Luis'))
+// c(a)
+/*----Funciones auto invocadas---- */
+
+const c = console.log
+let a = 'Hola'
+const saludar = ((saludo,persona) =>`${saludo} ${persona}`)(a,'Luis')
+
+c(saludar)
+
+
+
+
+
+
