@@ -620,14 +620,71 @@ aumentar()()//doble llmado porque llama a una doble funcion.
 
 * **Al inicio: **
 
-  * .unshit (*value*):
-  * shift():
+  * .unshit (*value*): agrega un valor como nuevo elemento al inicio
+
+  * shift(): elimina y el primer valor.
+
+    ```javascript
+    let array1 = [1,2,3,4]
+    //unshift
+    array1.unshift('Hola')
+    
+    //shift
+    array1.shift()
+    
+    ```
 
 * **Posición personalizada: **
 
+  * .splice(*startIndex*,*quantity*,*value1*,*value2*,*...*): Para una posicion personalizada
+  * .slice(*start*,*[,end]*): Extra
+
+
+
+```javascript
+let array=['Lima','Trujillo','Loreto','Cajamarca']
+//splice
+array.splice(1,0,'hola','string','salio')
+console.log(array)
+//slice
+console.log(array.slice(1,3))
+```
+
 #### Ordenar
 
+* .sort(*callback*):  Ordena un array de letras.
+
+* .reverse(): muestra un array al revés 
+
+  ```javascript
+  //sort
+  let array1=['A','F','Z','W','B']
+  console.log(array1.sort())
+  
+  let array2=[20,41,100,3000]
+  console.log(array2.sort((a,b)=> a- b))
+  
+  //reverse
+  let array=[1,2,3,4,5]
+  console.log(array.reverse())
+  let mensaje ="Hola mundo"
+  console.log(mensaje.split('').reverse())
+  ```
+
 #### Concatenar, transformar a string
+
+* .join(*separador*): Convierte el array a un string, y los valores los separa de acuerdo al separador ingresado. 
+* .concat():
+
+```javascript
+//join
+let array = [1,2,3,4,5]
+console.log(array.join(' '))
+
+//
+```
+
+
 
 #### Encontrar elementos
 

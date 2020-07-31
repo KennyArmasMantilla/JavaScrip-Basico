@@ -308,13 +308,48 @@ console.log(name)
 // console.log(s1)
 // console.log(s2)
 // console.log(s3)
+
 /*---------Agregar o quitar valores----------*/
-let array1 = [1,2,3,4]
-console.log(array1)
-array1.push(5)
-console.log(array1)
-array1.pop()
-console.log(array1)
+/*----Al final------*/
+// let array1 = [1,2,3,4]
+// console.log(array1)
+// array1.push(5)
+// console.log(array1)
+// array1.pop()
+// console.log(array1)
+
+/*------Al inicio------*/
+// let array1 = [1,2,3,4]
+// array1.unshift('Hola')
+// console.log(array1)
+// array1.shift()
+// console.log(array1)
+
+/*-----Personalizado------*/
+// let array =['Lima','Trujillo','Loreto','Cajamarca']
+// console.log(array)
+// array.splice(1,0,'hola','string','salio') //(Donde inicia, cantidad a borrar del array, valores a ingresar)
+// console.log(array)
+// console.log(array.slice(0,1))
+// console.log(array)
+
+/*------------Ordenar valores------------------*/
+/*------Reverse-------*/
+// let array=[1,2,3,4,5]
+// console.log(array.reverse())
+
+// let mensaje ="Hola mundo"
+// console.log(mensaje.split('').reverse()) //.join('') //Esto une
+/*--------Sort------*/
+// let array1=['A','F','Z','W','B']
+// console.log(array1.sort())
+
+// let array2=[20,41,100,3000]
+// console.log(array2.sort((a,b)=> a- b))
+
+/*----------Concatenar y transformar----------- */
+let array = [1,2,3,4,5]
+console.log(array.join(' '))
 
 
 
