@@ -674,35 +674,146 @@ console.log(array.slice(1,3))
 #### Concatenar, transformar a string
 
 * .join(*separador*): Convierte el array a un string, y los valores los separa de acuerdo al separador ingresado. 
-* .concat():
+* .concat(): Añade, junta 2 arrays en uno nuevo.
 
 ```javascript
 //join
 let array = [1,2,3,4,5]
 console.log(array.join(' '))
 
-//
+//concat
+let array2 = [1,2,3,4,2,'s',5]
+console.log(array.concat(array2))
+console.log(array.concat(12,21,43,123,21)) /*crea un nuevo array*/
+```
+
+#### Encontrar elementos
+
+* .indexOf(value): No muestra la posición del valor, si no encuentra nos devuelve un -1
+* .find(callback): Recibe un callback y devuelve el primer elemento que coincida con el callback.
+* .findIndex(callback): es igual que .find, con la diferencia que devuelve el Índice y no el valor. 
+
+```javascript
+let array = [1,2,3,4,5,21,342,"s","k",433,6,8,9]
+console.log(array)
+console.log(array.indexOf(21))
+console.log(array.indexOf("s"))
+
+console.log(array.find(number => number > 6))
+console.log(array.findIndex(number => number > 6))
+```
+
+### Spread Operator
+
+#### Objeto Math con arrays
+
+El objeto Math es para matemáticas. ejemplos, math.floor que convierte un decimal a un entero, etc.
+
+* Math.min(): Devuelve el menor valor de una lista de numeros
+* Math.max(): Devuelve el mayor valor de una lista de numeros
+
+```javascript
+let array = [10,20,30,5,3,9,4]
+console.log(Math.min(10,20,30,1))
+console.log(Math.max(10,20,30,1))
+
+console.log(Math.min(... array))
+console.log(Math.max(... array))
+```
+
+*Ojo:* Math.min(), y Math.max() no reciben arrays, ellos requieren una lista de parametros, por eso se puede usar el spread Operator.
+
+#### Eliminar elementos duplicados de un Array
+
+El objeto Set, no permite valore duplicados, si encuentra valores duplicadas solo toma el primero.
+
+* El spread Operator(...): El operador lo que hace es expandir, saca los valores del array y los traba como si fueran valores únicos.
+
+```javascript
+let array = [1,2,3,4,5,21,342,"s","k",433,1,2,3,"k",6,8,9]
+
+// console.log(new Set(array))
+// console.log([... new Set(array)])
+
+const removeDuplicates = arr => [... new Set(arr)]
+
+
+ let array2 = removeDuplicates(array)
+let array3 = [... new Set(['a','b','a','c'])]
+console.log(removeDuplicates(array))
+console.log(removeDuplicates(['a','b','a','c']))
+console.log(array2)
+console.log(array3)
+
+```
+
+### Recorrer un array
+
+#### for
+
+```javascript
+let array = [10,20,30,40,50]
+let array3 = ['a','b','d','h','i']
+
+for (let i=0; i < array.length;i++ ) {
+    console.log(array[i])
+}
+for (let i=0; i < array3.length;i++ ) {
+    console.log(array3[i])
+}
 ```
 
 
 
-#### Encontrar elementos
+#### for of:
 
-### Objeto Math con arrays
+Se usa creando una variable, usamos of para indicar donde vamos a recorrer. 
 
-### Eliminar elementos duplicados de un Array
+```javascript
+for (let a of array) {
+    console.log(a)
+}
+```
 
-### Recorrer un array
+#### forEach:
 
-### Map
+Usamos cuando queremos aplicar una función a cada elemento. forEach() es un metodo que recibe un callback, la cual como parametro pasamos un elemento y el indice. 
 
-### Fliter
+```javascript
+let array3 = ['a','b','d','h','i']
+array3.forEach((el,i) => {
+    console.log(el)
+    console.log(i)
+})
 
-### Reduce
+array3.forEach((el,i,arr) => {
+    console.log(el)
+    console.log(i)
+})
+```
 
+#### .some() .every()
 
+Es mas usado para saber si todos los elementos, o algunos, cumplen con una condicion. Ambos reciben un callback y ambos retornan un True o False.
 
+* some():  Al menos 1 cumpla con la condicion.
+* every(): Todos cumplan con la condicion.
 
+```javascript
+console.log(array3.some(el => el ==="d"))
+console.log(array3.every(el => el.includes("d"))
+```
+
+### Map, filter, reduce.
+
+Ambos reciben un callback, donde los 3 automaticamente crean un array
+
+* .map(*callback*)Transforma todos los elementos del array.
+
+* .filter(*callback*): Filtra los elementos que cumplan con la condición.
+* .reduce(*callback*): Reduce todos los elementos a un único valor
+
+Recibe un callback
 
 
 
