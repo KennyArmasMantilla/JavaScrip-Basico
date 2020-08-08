@@ -813,7 +813,162 @@ Ambos reciben un callback, donde los 3 automaticamente crean un array
 * .filter(*callback*): Filtra los elementos que cumplan con la condición.
 * .reduce(*callback*): Reduce todos los elementos a un único valor
 
-Recibe un callback
+```javascript
+let array = [10,20,30,40,50]
+
+let newArray = array.map(el =>el+el)
+console.log(newArray)
+
+let otherArray = array.filter(el=> el >20)
+console.log(otherArray)
+
+let sum = array.reduce((a,b)=> a+b)
+console.log(sum)
+```
+
+## 8. Objetos
+
+Es una estructura de datos
+
+```javascript
+{
+	propiedad:valor,
+	propiedad:valor2,
+	propiedad:valor3,..
+    metodo(){
+        //codigo del metodo
+    }
+}
+```
+
+Los objetos tienen propiedades y métodos. Una propiedad es una característica del objeto, y un método es algo que puede hacer
+
+```javascript
+let perro = {
+    nombre: "Jerry",
+    edad: 10,
+    color: "mostaza",
+    sexo: "macho",
+    vacunas: true,
+
+    correr(){
+        console.log(`${this.nombre} corre`)
+    }
+}
+
+console.log(perro.nombre)
+console.log(perro.edad)
+console.log(perro.color, perro.sexo)
+console.log(perro.correr())
+```
+
+Los objetos tambien pueden recibir expresiones como propiedades.
+
+```javascript
+let a = "Hola" , b = "mundo"
+
+let saludo = {
+    [a+b]: "Mi primer hola mundo"
+}
+
+//concatena la variable a+b, que puede reconocerse como holamundo
+
+let myObject = {
+    a:a,
+    b:b
+}
+```
 
 
+
+### prototipos y cadena de prototipos
+
+Todos datos vienen de un objeto. 
+
+* Object.getPrototypeof(): Esto nos indica cual es el prototipo del valor que pasemos como parametros.
+* .prototype: Es un molde para crear otros objetos.
+
+### Operadores
+
+* Delete: borra una propiedad de un objeto. es unario
+
+* in:  Es un operador que devulve true o devuelve false
+
+  ```javascript
+  //Eliminar
+  delete perro.edad
+  console.log(perro)
+  // para agregar solo se pone el objeto y lo agregar
+  perro.edad = 20
+  perro["feliz"]=true
+  console.log(perro)
+  
+  //in
+  console.log('sexo' in perro)
+  ```
+
+### Mutabilidad
+
+Los objetos son mutables, existen datos inmutables y mutables. Los inmutables son los que no pueden variar, ejemplo todos los valores primitivos.  mientras que los objetos si son mutables, pueden ser transformados. Los objetos son asignados por referencia, no por valor.  
+
+* Object.assign({},object):  Nos sirve para no alterar un objeto.
+
+```javascript
+let perro = {
+    nombre: "Jerry",
+    edad: 10,
+    color: "mostaza",
+    sexo: "macho",
+    vacunas: true,
+
+    correr(){
+        console.log(`${this.nombre} corre`)
+    }
+}
+let otroPerro = perro
+//el objeto perro tambien toma el atributo de patas
+otroPerro.patas=4 
+
+console.log(perro)
+//Apartir de perro cree una copia vacia
+let perro2= Object.assign({},perro)
+console.log(perro2)
+
+perro2.orejas = "largas"
+
+console.log(perro)
+console.log(perro2)
+
+```
+
+
+
+### Recorrer un objeto
+
+* **for in **:Devulve los nmbres de las propiedades de un objeto. Un for in nos permite el recorrer todo. *Ojo:* hasta las propiedades heredadas.
+
+```javascript
+Object.prototype.patas=4
+
+for (let property in perro){
+    console.log(property)
+}
+console.log(perro.patas)
+//Se puede evitar lo de patas de la siguiente manera
+for (let property in perro){
+    if(perro.hasOwnProperty(prototype))
+        console.log(property)
+}
+```
+
+* **for of**: No recorre un objeto, porque un objeto no tiene indice, No es iterable.
+* **Object.entries():** Devuelve como arrays, cada una de las entradas del Objeto. 
+* **Object.keys():** Devuelve un object con todas las propiedades. 
+* **Object.values():** Devuelve todos los valores.
+
+```javascript
+console.log(Object.entries(perro))
+console.log(Object.keys(perro))
+console.log(Object.values(perro))
+```
 

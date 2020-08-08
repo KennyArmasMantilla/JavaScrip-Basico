@@ -483,17 +483,68 @@ let array3 = ['a','b','d','h','i']
 // // para agregar solo se pone el objeto y lo agregar
 // perro.edad = 20
 // perro["feliz"]=true
-// console.log(perro)
+// console.log(perro) 
+// // Propiedad in
+// console.log('sexo' in perro)
+
+
+
 
 /*-------------Prototipos y cadena de prototipos--------------- */
-let amigo = 'carlos'
+// let amigo = 'carlos'
 
-console.log(Object.getPrototypeOf(amigo))
-//A esto se le llama un objeto constructor de los cuales no es muy
-//recomendale hacerlo.
-let amigo2= new String ('Kenny')
+// console.log(Object.getPrototypeOf(amigo))
+// //A esto se le llama un objeto constructor de los cuales no es muy
+// //recomendale hacerlo.
+// let amigo2= new String ('Kenny')
+
+/*------------------------Mutabilidad----------------------------- */
+let perro = {
+    nombre: "Jerry",
+    edad: 10,
+    color: "mostaza",
+    sexo: "macho",
+    vacunas: true,
+
+    correr(){
+        console.log(`${this.nombre} corre`)
+    }
+}
+
+// let otroPerro = perro
+// //el objeto perro tambien toma el atributo de patas
+// otroPerro.patas=4 
+
+// console.log(perro)
+// //Apartir de perro cree una copia vacia
+// let perro2= Object.assign({},perro)
+// console.log(perro2)
+
+// perro2.orejas = "largas"
+
+// console.log(perro)
+// console.log(perro2)
 
 
+
+
+
+/*----------------- recorrer un objeto------------------------- */
+// Object.prototype.patas=4
+
+// for (let property in perro){
+//     console.log(property)
+// }
+// console.log(perro.patas)
+
+// for (let property in perro){
+//     if(perro.hasOwnProperty(property))
+//         console.log(property)
+// }
+
+console.log(Object.entries(perro))
+console.log(Object.keys(perro))
+console.log(Object.values(perro))
 
 
 
